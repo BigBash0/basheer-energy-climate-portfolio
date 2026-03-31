@@ -31,8 +31,16 @@ body {
 
 .hero h2 {
   font-size: 1.5rem;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   color: #065f46;
+}
+
+.hero-subtext {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
 }
 
 .hero-text {
@@ -75,6 +83,17 @@ body {
   font-size: 2rem;
   margin-bottom: 22px;
   color: #111827;
+  position: relative;
+}
+
+.section h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #065f46;
+  margin-top: 8px;
+  border-radius: 2px;
 }
 
 .featured {
@@ -100,11 +119,19 @@ body {
   margin: 14px 0;
 }
 
+.takeaway {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: #f0fdf4;
+  border-left: 4px solid #065f46;
+  border-radius: 10px;
+}
+
 .featured-visual img,
 .project-card img {
   width: 100%;
   border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .project-gallery,
@@ -119,7 +146,13 @@ body {
   background: #fff;
   border-radius: 14px;
   padding: 18px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
 }
 
 .project-card h5 {
@@ -141,15 +174,18 @@ body {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
+  margin-top: 18px;
 }
 
 .skills-grid span {
   background: #e5f3ee;
   color: #065f46;
-  padding: 10px 14px;
+  padding: 10px 16px;
   border-radius: 999px;
   font-weight: 600;
+  border: 1px solid #cde7dd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .contact a {
